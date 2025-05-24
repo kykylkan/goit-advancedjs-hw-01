@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <style>
+    .gallery {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+    }
+    .gallery-item {
+      flex-basis: calc(25% - 10px);
+    }
+    .gallery-image {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  
+    .gallery {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 1024px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .gallery-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-image:hover {
+      transform: scale(1.03);
+    }
+
+  </style>
+  <script type="module" crossorigin src="/goit-advancedjs-hw-01/1-gallery.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-01/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-01/assets/vendor-CgTBfC_f.js">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-01/assets/vendor-DkczhqSJ.css">
+</head>
+<body>
+  <ul class="gallery"></ul>
+</body>
+</html>

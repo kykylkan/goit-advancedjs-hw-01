@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Form</title>
+  <style>
+    .feedback-form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      gap: 10px;
+    }
+    .feedback-form label {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+  
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input[type="email"]:hover,
+    textarea:hover {
+      border-color: #000;
+    }
+
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #2684ff;
+      box-shadow: 0 0 0 2px rgba(38, 132, 255, 0.2);
+    }
+
+    button[type="submit"] {
+      background-color: #4c8bf5;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #6a9dfc;
+    }
+
+  </style>
+  <script type="module" crossorigin src="/goit-advancedjs-hw-01/2-form.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-01/assets/modulepreload-polyfill-B5Qt9EMX.js">
+</head>
+<body>
+  <form class="feedback-form" autocomplete="off">
+    <label>
+      Email
+      <input type="email" name="email" autofocus />
+    </label>
+    <label>
+      Message
+      <textarea name="message" rows="8"></textarea>
+    </label>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
